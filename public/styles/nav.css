@@ -1,0 +1,26 @@
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ #nav-bar {
+  background-color: #00a087;
+  color: #e8fdff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.header {
+  color: white;
+  font-size: 40px;
+  position: relative;
+  bottom: 20%;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
