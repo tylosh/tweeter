@@ -2,14 +2,40 @@
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
-
  .new-tweet {
   border-radius: 5px;
   background-color: rgba(211, 211, 211, 0.507);
-  border: 1px solid lightgrey; 
+  border: 1px solid lightgrey;
+  height: 134px; 
  }
 
  .new-tweet h2 {
-  border-bottom: 2px solid darkgray;
+  height: 30px;
+  border-bottom: 2px solid black;
+  padding-left: 8px;
+  padding-right: 4px;
+  margin: 8px
+ }
+
+ 
+
+ .new-tweet textarea[name="text"] {
+   float: left;
+   width: 98%;
+   padding-right: 6px;
+   padding-left: 6px;
+   margin: 4px;
+ }
+ 
+ .new-tweet input[type=submit] {
+  clear: left;
+  margin: 5px;
+
+}
+ .counter{
+   text-align: right;
+   float: right;
+   padding-right: 4px;
+   margin: 7px;
+   font-style: italic;
  }
