@@ -27,6 +27,9 @@ body {
 
 .container {
   padding-top: 140px;
+  padding-bottom: 500px;
+  padding-right: 2em;
+  padding-left: 2em;
   width: 450px;
   margin: auto;
   background-color: white;  
