@@ -52,3 +52,11 @@
     border-top: 1px solid lightblue; 
    }
 
+   .all-tweetsA {
+       opacity: .75;
+   }
+
+   .all-tweetsA:hover {
+        opacity: 1;
+      }
+}
