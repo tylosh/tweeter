@@ -18,11 +18,10 @@
  }
 
  
-
+/* this should be centered somehow*/
  .new-tweet textarea[name="text"] {
    float: left;
    width: 98%;
-   padding-right: 6px;
    padding-left: 6px;
    margin: 4px;
  }
