@@ -11,13 +11,16 @@ $(() => {
 
     //const $tweetInput = $('#tweet-input');
     
-    tweetLimit = 140;
+    const tweetLimit = 140;
 
-    $("textarea").keypress(function() {
+    $("textarea").keyup(function() {
         const tweetLength = $("textarea").val().length;
-        console.log("--", tweetLimit -tweetLength);
-        console.log($("counter").text())
+        const tweetLengthAvailable = tweetLimit - tweetLength;
+        console.log("--", tweetLengthAvailable);
+        console.log($("#tweetTextAvail").val())
         console.log(this);
+        
+        $("#tweetTextAvail").css("color", "red") /* = tweetLimit- tweetLength;*/
       });
 
 })
@@ -25,3 +28,6 @@ $(() => {
 
 //#tweet-input textarea
 //https://stackoverflow.com/questions/11502563/id-tag-vs-id-findtag-which-is-preferable
+
+
+//keypress doesn't recognize delete key (so won't update count)
