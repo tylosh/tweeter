@@ -16,5 +16,5 @@ $(() => {
         if (tweetLengthAvailable < 0) {
            $("#tweetTextAvail").css("color", "red") /* = tweetLimit- tweetLength;*/ 
         } else {$("#tweetTextAvail").css("color", "black")}
-      });
+    });
 })
