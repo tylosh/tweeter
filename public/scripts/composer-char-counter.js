@@ -16,11 +16,12 @@ $(() => {
     $("textarea").keyup(function() {
         const tweetLength = $("textarea").val().length;
         const tweetLengthAvailable = tweetLimit - tweetLength;
-        console.log("--", tweetLengthAvailable);
-        console.log($("#tweetTextAvail").text(tweetLengthAvailable))
-        console.log(this);
+        $("#tweetTextAvail").text(tweetLengthAvailable)
+        //console.log(this);
+        if (tweetLengthAvailable < 0) {
+           $("#tweetTextAvail").css("color", "red") /* = tweetLimit- tweetLength;*/ 
+        } else {$("#tweetTextAvail").css("color", "black")}
         
-        $("#tweetTextAvail").css("color", "red") /* = tweetLimit- tweetLength;*/
       });
 
 })
