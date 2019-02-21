@@ -85,6 +85,33 @@
         }
     } 
     renderTweets(data);
+
+   
+
+
+
+    $('.new-tweet').on('submit', (event) => {
+        // Don't let it submit naturally. We will do it async!
+        event.preventDefault();
+        
+        const data = $('#tweet-input').serialize();
+        console.log('data: ', data);
+        
+        $.post('/tweets', data)
+        /*
+        
+        .then((creature) => {
+            const elm = createCreatureElement(creature)
+            appendCreature(elm);
+            })
+            .catch((err) => {
+            console.log(err);
+            alert('Error submitting creature. Oops!');
+            });
+        */
+    });
+
+
 })
 // Test / driver code (temporary). Eventually will get this from the server.
 
