@@ -59,7 +59,9 @@
             alert("Tweet is too long")
         } else {
             $.post('/tweets', data)
+            loadTweets()
         }
+        loadTweets()
     });
 
 })
