@@ -53,7 +53,7 @@
         }
       ];
     
-    //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc.  
+    //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc. 
     //this function extracts data from a tweet object, and applies into html container 
     createTweetElement = function(tweetObj) {
         return `<article class="all-tweetsA">
