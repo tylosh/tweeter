@@ -25,7 +25,7 @@
                 <p> ${tweetObj.user.handle} </p>
             </header>
             <section>    
-                <p>${tweetObj.content.text}</p>
+                <p>${escape(tweetObj.content.text)}</p>
             </section>
             <footer>
                 <p>
@@ -64,6 +64,12 @@
 
     });
 
-})
-// Test / driver code (temporary). Eventually will get this from the server.
 
+    function escape(str) {
+        //Preventing XSS with Escaping
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+      }
+
+})
