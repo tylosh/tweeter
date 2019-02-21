@@ -2,6 +2,8 @@
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/*need to clean this up especially indentation*/
+
 
  .all-tweets header {
   background-color: rgba(211, 211, 211, 0.507);
@@ -52,11 +54,24 @@
     border-top: 1px solid lightblue; 
    }
 
+.all-tweets footer article {
+    float: right;
+}
+
+   article.icons-footer {
+       float: right;
+       opacity: .0;
+   }
+ 
    .all-tweetsA {
-       opacity: .75;
+       opacity: .65;
+   }
+
+   .all-tweetsA:hover .icons-footer {
+    opacity: 1;
    }
 
    .all-tweetsA:hover {
         opacity: 1;
       }
-}
+};
