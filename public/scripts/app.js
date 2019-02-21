@@ -87,19 +87,43 @@
     renderTweets(data);
 
    
-
+    
 
 
     $('.new-tweet').on('submit', (event) => {
-        // Don't let it submit naturally. We will do it async!
         event.preventDefault();
         
         const data = $('#tweet-input').serialize();
         console.log('data: ', data);
         
         $.post('/tweets', data)
-        /*
         
+        
+    function loadTweets() {
+        $.getJSON('/tweets.json', (tweets, status, xhr) => {
+            console.log(data);
+            // console.log(status);
+            // console.log(xhr);
+            /*
+            for (let creature of creatures) {
+              // console.log(creature);
+              const elm = createCreatureElement2(creature);
+              appendCreature(elm);
+            }
+            */
+          });      
+    }
+
+    function loadTweets () {
+        $.get("/tweets", (tweets) => {
+            console.log(tweets);
+            
+        });
+    };
+
+    loadTweets();
+    
+        /*
         .then((creature) => {
             const elm = createCreatureElement(creature)
             appendCreature(elm);
