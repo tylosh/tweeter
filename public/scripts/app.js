@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
  $('document').ready(function(e){
     const tweetData = {
         "user": {
@@ -20,8 +19,10 @@
           "text": "If I have seen further it is by standing on the shoulders of giants"
         },
         "created_at": 1461116232227
-      }
-      
+    }
+    
+    //mentor said that given I was behind, ok to use this simpler method of vs. jQuery .add etc.  
+    //this function extractsdata from a tweet object, and applies into html container 
     createTweetElement = function(tweetObj) {
         return `<article class="all-tweetsA">
             <header>
@@ -44,10 +45,10 @@
             </footer>`       
     };
     
-      var $tweet = createTweetElement(tweetData);
-      
-      // Test / driver code (temporary)
-      //console.log($tweet); // to see what it looks like
-      $('#tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+    var $tweet = createTweetElement(tweetData);
+    
+    // Test / driver code (temporary)
+    //console.log($tweet); // to see what it looks like
+    $('#tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
  })
 // Test / driver code (temporary). Eventually will get this from the server.
