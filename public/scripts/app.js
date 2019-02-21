@@ -53,6 +53,21 @@
         }
       ];
     
+    //var tweetArray = null;
+
+    function loadTweets () {
+        $.get("/tweets", (tweets) => {
+            let tweetArray = tweets;
+            //console.log(tweetArray)
+            renderTweets(tweetArray);
+        });
+    }loadTweets()
+
+    //console.log(loadTweets());
+
+    //console.log(tweetArray)
+
+
     //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc. 
     //this function extracts data from a tweet object, and applies into html container 
     createTweetElement = function(tweetObj) {
@@ -79,12 +94,13 @@
     
     function renderTweets(tweets) {
         // loops through tweets from data array, applies html staging, then appends to tweet-container
-        for (let i = 0; i < data.length; i++) {
-            var $tweet = createTweetElement(data[i]);
+        
+        for (let i = 0; i < tweets.length; i++) {
+            var $tweet = createTweetElement(tweets[i]);
             $('#tweet-container').append($tweet);
         }
     } 
-    renderTweets(data);
+    
 
    
     
@@ -98,43 +114,11 @@
         
         $.post('/tweets', data)
         
-        
-    function loadTweets() {
-        $.getJSON('/tweets.json', (tweets, status, xhr) => {
-            console.log(data);
-            // console.log(status);
-            // console.log(xhr);
-            /*
-            for (let creature of creatures) {
-              // console.log(creature);
-              const elm = createCreatureElement2(creature);
-              appendCreature(elm);
-            }
-            */
-          });      
-    }
-
-    function loadTweets () {
-        $.get("/tweets", (tweets) => {
-            console.log(tweets);
-            
-        });
-    };
-
-    loadTweets();
-    
-        /*
-        .then((creature) => {
-            const elm = createCreatureElement(creature)
-            appendCreature(elm);
-            })
-            .catch((err) => {
-            console.log(err);
-            alert('Error submitting creature. Oops!');
-            });
-        */
     });
 
+   
+
+    
 
 })
 // Test / driver code (temporary). Eventually will get this from the server.
