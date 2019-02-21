@@ -49,12 +49,17 @@
     
     $('.new-tweet').on('submit', (event) => {
         event.preventDefault();
-        
+    
         const data = $('#tweet-input').serialize();
-        console.log('data: ', data);
+        const sliceData = data.slice(5);
         
-        $.post('/tweets', data)
-        
+        if (sliceData === null || sliceData === "") {
+            alert("Tweet is empty")
+        } else if (sliceData.length > 140) {
+            alert("Tweet is too long")
+        } else {
+            $.post('/tweets', data)
+        }
     });
 
 })
