@@ -43,7 +43,7 @@
         // loops through tweets from data array, applies html staging, then appends to tweet-container
         for (let i = 0; i < tweets.length; i++) {
             var $tweet = createTweetElement(tweets[i]);
-            $('#tweet-container').append($tweet);
+            $('#tweet-container').prepend($tweet);
         }
     } 
     
@@ -61,7 +61,7 @@
             $.post('/tweets', data)
             loadTweets()
         }
-        loadTweets()
+
     });
 
 })
