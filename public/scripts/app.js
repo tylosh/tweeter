@@ -59,6 +59,8 @@
             alert("Tweet is too long")
         } else {
             $.post('/tweets', data)
+            $('#tweet-input').val('')
+            $("#tweetTextAvail").text(140)
             loadTweets()
         }
 
