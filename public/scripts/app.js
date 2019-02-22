@@ -39,7 +39,7 @@
     };
 
     function renderTweets(tweets) {
-        // loops through tweets from data array, applies html staging, then appends to tweet-container
+        // loops through tweets from data array, applies html staging, then prepends to tweet-container
         for (let i = 0; i < tweets.length; i++) {
             var $tweet = createTweetElement(tweets[i]);
             $('#tweet-container').prepend($tweet);
@@ -47,18 +47,18 @@
     }; 
 
     function renderLastTweet(newTweet) {
-    //function to prepend just the last tweet, taking data from the posted tweet
+        //function to prepend just the last tweet, taking data from the tweet POST
         var $tweet = createTweetElement(newTweet)
         $('#tweet-container').prepend($tweet); 
     }; 
     
     function loadTweets () {
         //function to load tweets from server and append/render on tweet-container 
-            $.get("/tweets", (tweets) => {
-                let tweetArray = tweets;
-                renderTweets(tweetArray);
-            });
-        };
+        $.get("/tweets", (tweets) => {
+            let tweetArray = tweets;
+            renderTweets(tweetArray);
+        });
+    };
         
     loadTweets();
 
@@ -70,7 +70,10 @@
     }
 
 
-    /*-----------Routes/Buttons-------------*/
+    /*--------------------Routes/Buttons-------------------*/
+
+
+    /*----------Tweet Submit-----------------*/
 
     $('.new-tweet').on('submit', (event) => {
         event.preventDefault();
@@ -85,6 +88,8 @@
         $("#tweetTextAvail").text(140);
         $('#tweetButton').prop('disabled', true);
     });
+
+    /*-----Dealing with the Compose Button-----*/
 
     //Code to hide the compose button on load, and fade in/out when the button is clicked.
     $('.new-tweet').hide();
