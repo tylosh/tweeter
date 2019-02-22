@@ -39,6 +39,10 @@
     padding-left: 0.5em;
    }
 
+   .all-tweets section p {
+      word-break: break-all;
+   }
+
  .all-tweets footer {
     height: 30px;
     display: flex;
