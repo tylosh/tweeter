@@ -72,4 +72,24 @@
         return div.innerHTML;
       }
 
+    
+    var buttonValue = 0;
+
+    $('.btn').on('click', (event) => {
+        event.preventDefault();
+        
+        //on load, compose is visible, on click value is set to 1 and hidden, next button click will fade in and then repeat
+        if (buttonValue === 0) {
+            $('.new-tweet').fadeOut();
+        buttonValue = 1
+        } else {
+            $('.new-tweet').fadeIn();
+            buttonValue = 0;  
+        }
+
+    });
+
+
+
+
 })
