@@ -26,7 +26,6 @@
   float: right;
   background-color: rgb(235, 232, 232);
   border: 1px solid black;
-  /*border-radius: 5px;*/
   margin-top: 15px;
   opacity: .65;
 }
@@ -34,7 +33,6 @@
 #nav-bar aside:hover {
   opacity: 1;
 }
-
 
 #btn {
   background-color:transparent;

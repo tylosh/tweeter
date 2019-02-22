@@ -21,7 +21,7 @@
                 </section>
                 <footer>
                     <p>
-                        Posted ${tweetObj.created_at} ago.
+                        Posted ${tweetObj.created_at}.
                     </p>
             
                     <section class="icons-footer"> 

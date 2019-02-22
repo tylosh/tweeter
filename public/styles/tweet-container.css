@@ -2,88 +2,86 @@
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/*need to clean this up especially indentation*/
-
-
- .all-tweets header {
-  background-color: rgba(211, 211, 211, 0.507);
-  height: 80px;
-  border-top: 1px solid lightgrey;
-  border-left: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px; 
- }
-
- .all-tweets header aside {
-    float: left;
-    margin: 12px;
- }
-
- .all-tweets header p {
-    text-align: right;
-    float: right;
-    padding-right: 1em;
- }
-
- .all-tweets header h2 {
-    float: left;
-    margin-top: 10px;
- }
-
- .all-tweets section {
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    display: flex;
-    align-items: top;
-    padding-left: 0.5em;
-   }
-
-   .all-tweets section p {
-      word-break: break-all;
-   }
-
- .all-tweets footer {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 80%;
-    padding-left: 0.5em;
-    background-color: red;
-
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-top: 1px solid lightblue; 
-   }
-
-.all-tweets footer article {
-    float: right;
+.all-tweets header {
+   background-color: rgba(211, 211, 211, 0.507);
+   height: 80px;
+   border-top: 1px solid lightgrey;
+   border-left: 1px solid lightgrey;
+   border-right: 1px solid lightgrey;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px; 
 }
 
-   .icons-footer {
-       float: right;
-       width: 60%;
-       opacity: .0;
-       height: 30px;
-       background-color: yellow;
-   }
+.all-tweets header aside {
+   float: left;
+   margin: 12px;
+}
 
-   .icons-footer img {
-      float: right;
-      background-color: blue;
-   }
- 
-   .all-tweetsA {
-       opacity: .65;
-   }
+.all-tweets header p {
+   text-align: right;
+   float: right;
+   padding-right: 1em;
+}
 
-   .all-tweetsA:hover .icons-footer {
-    opacity: 1;
-   }
+.all-tweets header h2 {
+   float: left;
+   margin-top: 10px;
+}
 
-   .all-tweetsA:hover {
-        opacity: 1;
-      }
+.all-tweets section {
+   border-left: 1px solid lightgrey;
+   border-right: 1px solid lightgrey;
+   display: flex;
+   align-items: top;
+   padding-left: 0.5em;
+}
+
+.all-tweets section p {
+   word-break: break-all;
+}
+
+.all-tweets footer {
+   height: 30px;
+   display: flex;
+   align-items: center;
+   font-size: 80%;
+   padding-left: 0.5em;
+   background-color: red;
+
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   border-bottom: 1px solid lightgrey;
+   border-left: 1px solid lightgrey;
+   border-right: 1px solid lightgrey;
+   border-top: 1px solid lightblue; 
+}
+
+.all-tweets footer article {
+   float: right;
+}
+
+.icons-footer {
+   float: right;
+       
+   width: 60%;
+   opacity: .0;
+   height: 30px;
+   background-color: yellow;
+}
+
+.icons-footer img {
+   float: right;
+   background-color: blue;
+}
+
+.all-tweetsA {
+   opacity: .65;
+}
+
+.all-tweetsA:hover .icons-footer {
+   opacity: 1;
+}
+
+.all-tweetsA:hover {
+   opacity: 1;
+}

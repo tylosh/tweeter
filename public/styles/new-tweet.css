@@ -2,49 +2,47 @@
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .new-tweet {
+.new-tweet {
   border-radius: 5px;
   background-color: rgba(211, 211, 211, 0.507);
   border: 1px solid lightgrey;
   padding: 10px;
- }
+}
 
- .new-tweet h2 {
+.new-tweet h2 {
   height: 30px;
   border-bottom: 2px solid black;
   padding-left: 8px;
   padding-right: 4px;
   margin: 8px
- }
+}
 
- 
-/* this should be centered somehow*/
- .new-tweet textarea[name="text"] {
-   float: left;
-   width: 98%;
-   padding-left: 6px;
-   margin: 4px;
- }
- 
- .new-tweet input[type=submit] {
+.new-tweet textarea[name="text"] {
+  float: left;
+  width: 98%;
+  padding-left: 6px;
+  margin: 4px;
+}
+
+.new-tweet input[type=submit] {
   clear: left;
   margin: 5px;
-
 }
- .counter{
-   text-align: right;
-   float: right;
-   padding-right: 4px;
-   margin: 7px;
-   font-style: italic;
- }
 
- #tweetLong {
+.counter{
+  text-align: right;
+  float: right;
+  padding-right: 4px;
+  margin: 7px;
+  font-style: italic;
+}
+
+#tweetLong {
   color: teal;
   font-style: italic;
- }
+}
 
- #tweetEmpty {
-   color: teal;
-   font-style: italic;
- }
+#tweetEmpty {
+  color: teal;
+  font-style: italic;
+}
