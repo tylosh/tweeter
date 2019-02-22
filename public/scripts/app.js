@@ -1,3 +1,5 @@
+//TFT reorgnize tours vs. functions, but test that itworks?
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -40,7 +42,10 @@
                         <img src= "https://images.vexels.com/media/users/3/144097/isolated/preview/3dedcd235214cdde6b4e171fdbf66c9d-heart-icon-by-vexels.png" alt="heart" style="width:15px;height:15px;">
                     </section>
                 </footer>
-            </article>`
+            </article>
+            <div> 
+                <p></p>  
+            </div>`
         )       
     };
     
@@ -79,7 +84,6 @@
         div.appendChild(document.createTextNode(str));
         return div.innerHTML;
       }
-
     
     var buttonValue = 0;
 
