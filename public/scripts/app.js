@@ -15,8 +15,7 @@
             renderTweets(tweetArray);
         });
     }
-    loadTweets()
-
+    loadTweets();
 
     //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc. 
     //this function extracts data from a tweet object, and applies into html container 
@@ -57,24 +56,19 @@
         }
     } 
     
+
     $('.new-tweet').on('submit', (event) => {
         event.preventDefault();
     
         const data = $('#tweet-input').serialize();
         const sliceData = data.slice(5);
-        
-        if (sliceData === "") {
-            alert("Tweet is empty")
-        } else if (sliceData.length > 140) {
-            alert("Tweet is too long")
-        } else {
-            $.post('/tweets', data)
-            // () => callback ES6
-            .then(() => loadTweets())
-            $('#tweet-input').val('')
-            $("#tweetTextAvail").text(140)
-        }
-        
+                
+        $.post('/tweets', data)
+        // () => callback ES6
+        .then(() => loadTweets())
+        $('#tweet-input').val('')
+        $("#tweetTextAvail").text(140)
+        $('#tweetButton').prop('disabled', true);
     });
 
 
@@ -101,8 +95,6 @@
         }
 
     });
-
-
 
 
 })
