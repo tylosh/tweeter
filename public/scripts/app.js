@@ -15,6 +15,7 @@
             renderTweets(tweetArray);
         });
     }
+    
     loadTweets();
 
     //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc. 
@@ -77,14 +78,19 @@
         var div = document.createElement('div');
         div.appendChild(document.createTextNode(str));
         return div.innerHTML;
-      }
+    }
     
-    var buttonValue = 0;
 
+    //Code to hide the compose button on load, and fade in/out when the button is clicked
+
+    $('.new-tweet').hide();
+    
+    var buttonValue = 1;
+    
     $('.btn').on('click', (event) => {
         event.preventDefault();
         
-        //on load, compose is visible, on click value is set to 1 and hidden, next button click will fade in and then repeat
+        //on load, compose is not visible, on click value is set to 0 and show, next button click will fade out and then repeat
         if (buttonValue === 0) {
             $('.new-tweet').fadeOut();
         buttonValue = 1
@@ -93,8 +99,7 @@
             $('#tweet-input').focus().select();
             buttonValue = 0;  
         }
-
     });
 
-
 })
+

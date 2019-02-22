@@ -21,10 +21,8 @@ module.exports = function makeDataHelpers(db) {
           return callback(err);
         }
         callback(null, tweets.sort(sortNewestFirst));
-      });
-        
+      });      
     }
-
   };
 }
 

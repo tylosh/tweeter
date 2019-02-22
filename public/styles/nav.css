@@ -2,7 +2,7 @@
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- #nav-bar {
+#nav-bar {
   background-color: #00a087;
   color: #e8fdff;
   position: fixed;
@@ -38,7 +38,7 @@
 
 #btn_container {
   background-color:transparent
-
+  border-radius: 5px;
 }
 
 #nav-bar .logo {
