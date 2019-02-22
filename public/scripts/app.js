@@ -84,6 +84,7 @@
         buttonValue = 1
         } else {
             $('.new-tweet').fadeIn();
+            $('#tweet-input').focus().select();
             buttonValue = 0;  
         }
 
