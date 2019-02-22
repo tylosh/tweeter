@@ -49,6 +49,7 @@
     align-items: center;
     font-size: 80%;
     padding-left: 0.5em;
+    background-color: red;
 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -62,9 +63,17 @@
     float: right;
 }
 
-   article.icons-footer {
+   .icons-footer {
        float: right;
+       width: 60%;
        opacity: .0;
+       height: 30px;
+       background-color: yellow;
+   }
+
+   .icons-footer img {
+      float: right;
+      background-color: blue;
    }
  
    .all-tweetsA {

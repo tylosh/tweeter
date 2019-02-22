@@ -44,6 +44,12 @@
             $('#tweet-container').prepend($tweet);
         }
     }; 
+
+    function renderLastTweet(newTweet) {
+    //function to prepend just the last tweet, taking data from the posted tweet
+        var $tweet = createTweetElement(newTweet)
+        $('#tweet-container').prepend($tweet); 
+    }; 
     
     function loadTweets () {
         //function to load tweets from server and append/render on tweet-container 
@@ -71,9 +77,9 @@
         const data = $('#tweet-input').serialize();
         const sliceData = data.slice(5);
                 
-        $.post('/tweets', data)
-        // () => callback ES6
-        .then(() => loadTweets());
+        $.post('/tweets', data, function(data){
+            renderLastTweet(data);
+        });
         $('#tweet-input').val('');
         $("#tweetTextAvail").text(140);
         $('#tweetButton').prop('disabled', true);
