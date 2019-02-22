@@ -36,6 +36,10 @@
    padding-left: 0.5em;
 }
 
+.all-tweets footer section {
+   border: 0px
+}
+
 .all-tweets section p {
    word-break: break-all;
 }
@@ -46,7 +50,6 @@
    align-items: center;
    font-size: 80%;
    padding-left: 0.5em;
-   background-color: red;
 
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
@@ -60,28 +63,32 @@
    float: right;
 }
 
-.icons-footer {
+.all-tweets footer p {
+   width: 85%;
+}
+
+.all-tweets footer aside {
    float: right;
-       
-   width: 60%;
+}
+
+
+.icons-footer {
    opacity: .0;
-   height: 30px;
-   background-color: yellow;
 }
 
 .icons-footer img {
    float: right;
-   background-color: blue;
 }
 
-.all-tweetsA {
+.all-tweetsArticle {
    opacity: .65;
 }
 
-.all-tweetsA:hover .icons-footer {
+.all-tweetsArticle:hover .icons-footer {
    opacity: 1;
 }
 
-.all-tweetsA:hover {
+.all-tweetsArticle:hover {
    opacity: 1;
 }
+

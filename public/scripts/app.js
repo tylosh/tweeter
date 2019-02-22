@@ -10,7 +10,7 @@
     //this function extracts data from a tweet object, and applies into html container 
     const createTweetElement = function(tweetObj) {
         return (
-            `<article class="all-tweetsA">
+            `<article class="all-tweetsArticle">
                 <header>
                     <aside> <img src=${tweetObj.user.avatars.small} alt="avatar"> </aside>
                     <h2>${tweetObj.user.name}</h2>
@@ -23,12 +23,13 @@
                     <p>
                         Posted ${tweetObj.created_at}.
                     </p>
-            
-                    <section class="icons-footer"> 
-                        <img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/flag.png" alt="flag" style="width:15px;height:15px;"> 
-                        <img src="https://cdn3.iconfinder.com/data/icons/random-icon-set/512/retweet-512.png" alt="retweet" style="width:15px;height:15px;"> 
-                        <img src= "https://images.vexels.com/media/users/3/144097/isolated/preview/3dedcd235214cdde6b4e171fdbf66c9d-heart-icon-by-vexels.png" alt="heart" style="width:15px;height:15px;">
-                    </section>
+                    <aside>
+                        <section class="icons-footer"> 
+                            <img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/flag.png" alt="flag" style="width:15px;height:15px;"> 
+                            <img src="https://cdn3.iconfinder.com/data/icons/random-icon-set/512/retweet-512.png" alt="retweet" style="width:15px;height:15px;"> 
+                            <img src= "https://images.vexels.com/media/users/3/144097/isolated/preview/3dedcd235214cdde6b4e171fdbf66c9d-heart-icon-by-vexels.png" alt="heart" style="width:15px;height:15px;">
+                        </section>
+                    </aside>
                 </footer>
             </article>
             <div> 
