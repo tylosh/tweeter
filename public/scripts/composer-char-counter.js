@@ -12,6 +12,9 @@ $(() => {
     //set tweet button to disabled on load (no text)
     $('#tweetButton').prop('disabled', true); 
 
+    //hide tweet too long message
+    $('#tweetLong').hide();
+
     $("textarea").keyup(function() {
         const tweetLength = $("textarea").val().length;
         const tweetLengthAvailable = tweetLimit - tweetLength;
@@ -20,12 +23,18 @@ $(() => {
         //Change character counter to be red if negative, disable tweet button if no text, or >140 characters
         if (tweetLengthAvailable < 0) {
             $("#tweetTextAvail").css("color", "red") /* = tweetLimit- tweetLength;*/
-            $('#tweetButton').prop('disabled', true); 
+            $('#tweetButton').prop('disabled', true);
+            $('#tweetLong').show();
+            $('#tweetEmpty').hide() 
         } else if (tweetLengthAvailable === 140) {
             $('#tweetButton').prop('disabled', true);
+            $('#tweetLong').hide();
+            $('#tweetEmpty').show(); 
         } else {
             $("#tweetTextAvail").css("color", "black")
             $('#tweetButton').prop('disabled', false); 
+            $('#tweetLong').hide();
+            $('#tweetEmpty').hide() 
         }
     });
 })

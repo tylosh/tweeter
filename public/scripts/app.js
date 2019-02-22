@@ -1,5 +1,3 @@
-//TFT reorgnize tours vs. functions, but test that itworks?
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -8,16 +6,6 @@
 
  $('document').ready(function(e){
     
-    function loadTweets () {
-    //function to load tweets from server and append/render on tweet-container 
-        $.get("/tweets", (tweets) => {
-            let tweetArray = tweets;
-            renderTweets(tweetArray);
-        });
-    }
-    
-    loadTweets();
-
     //mentor said that given I was behind, ok to use this simpler method below vs. jQuery .add etc. 
     //this function extracts data from a tweet object, and applies into html container 
     const createTweetElement = function(tweetObj) {
@@ -33,7 +21,7 @@
                 </section>
                 <footer>
                     <p>
-                        Posted 10 days ago.
+                        Posted ${tweetObj.created_at} ago.
                     </p>
             
                     <section class="icons-footer"> 
@@ -48,15 +36,34 @@
             </div>`
         )       
     };
-    
+
     function renderTweets(tweets) {
         // loops through tweets from data array, applies html staging, then appends to tweet-container
         for (let i = 0; i < tweets.length; i++) {
             var $tweet = createTweetElement(tweets[i]);
             $('#tweet-container').prepend($tweet);
         }
-    } 
+    }; 
     
+    function loadTweets () {
+        //function to load tweets from server and append/render on tweet-container 
+            $.get("/tweets", (tweets) => {
+                let tweetArray = tweets;
+                renderTweets(tweetArray);
+            });
+        };
+        
+    loadTweets();
+
+    function escape(str) {
+        //Preventing XSS with Escaping
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+
+
+    /*-----------Routes/Buttons-------------*/
 
     $('.new-tweet').on('submit', (event) => {
         event.preventDefault();
@@ -66,23 +73,13 @@
                 
         $.post('/tweets', data)
         // () => callback ES6
-        .then(() => loadTweets())
-        $('#tweet-input').val('')
-        $("#tweetTextAvail").text(140)
+        .then(() => loadTweets());
+        $('#tweet-input').val('');
+        $("#tweetTextAvail").text(140);
         $('#tweetButton').prop('disabled', true);
     });
 
-
-    function escape(str) {
-        //Preventing XSS with Escaping
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(str));
-        return div.innerHTML;
-    }
-    
-
     //Code to hide the compose button on load, and fade in/out when the button is clicked.
-
     $('.new-tweet').hide();
     
     var buttonValue = 1;
@@ -93,7 +90,7 @@
         //on load, compose is not visible, on click value is set to 0 and show, next button click will fade out and then repeat
         if (buttonValue === 0) {
             $('.new-tweet').fadeOut();
-        buttonValue = 1
+        buttonValue = 1;
         } else {
             $('.new-tweet').fadeIn();
             $('#tweet-input').focus().select();
@@ -101,5 +98,5 @@
         }
     });
 
-})
+});
 

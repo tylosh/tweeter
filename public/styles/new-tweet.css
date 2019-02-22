@@ -38,3 +38,13 @@
    margin: 7px;
    font-style: italic;
  }
+
+ #tweetLong {
+  color: teal;
+  font-style: italic;
+ }
+
+ #tweetEmpty {
+   color: teal;
+   font-style: italic;
+ }

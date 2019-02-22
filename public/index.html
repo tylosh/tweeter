@@ -32,7 +32,7 @@
       <aside>
         <button class="btn">               
           <span class="compose-btn"> Compose</span>
-          <div id="btn_container"><img  src="https://cdn3.iconfinder.com/data/icons/basic-ui-31/16/07.Basic_UI_edit-compose-write-07-512.png" style="width:10px;height:10px" width="30" height="30"/></div>
+          <div id="btn_container"><img  src="https://cdn3.iconfinder.com/data/icons/basic-ui-31/16/07.Basic_UI_edit-compose-write-07-512.png" style="width:10px;height:10px" /></div>
         </button>
       </aside>
     </nav>
@@ -45,6 +45,8 @@
             <form action="/tweets/" method="POST">
               <textarea id="tweet-input" name="text" placeholder="What are you humming about?"></textarea>
               <input id="tweetButton" type="submit" value="Tweet">
+              <span id ="tweetLong"> Tweet too long</span>
+              <span id ="tweetEmpty"> Please insert text</span>
               <span id ="tweetTextAvail" class="counter">140</span>   
             </form>
         </section>

@@ -36,8 +36,8 @@
 }
 
 
-#btn_container {
-  background-color:transparent
+#btn {
+  background-color:transparent;
   border-radius: 5px;
 }
 
