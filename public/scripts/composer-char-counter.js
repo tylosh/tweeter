@@ -8,6 +8,7 @@ $(() => {
     const tweetLimit = 140;
 
     //Following Twitter logic, Tweet button will be disabled if tweet box is null or >140 characters
+    //https://blog.revillweb.com/jquery-disable-button-disabling-and-enabling-buttons-with-jquery-5e3ffe669ece
     //set tweet button to disabled on load (no text)
     $('#tweetButton').prop('disabled', true); 
 
