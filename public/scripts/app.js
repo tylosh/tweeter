@@ -81,7 +81,7 @@
     }
     
 
-    //Code to hide the compose button on load, and fade in/out when the button is clicked
+    //Code to hide the compose button on load, and fade in/out when the button is clicked.
 
     $('.new-tweet').hide();
     
